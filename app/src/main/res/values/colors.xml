@@ -19,6 +19,12 @@
     <color name="background">#dddddd</color>
     <color name="lightgray">#EDE7F6</color>
 
+    <color name="success">#4CAF50</color>
+    <color name="cancel">#E64A19</color>
+    <color name="current">#2196F3</color>
+    <color name="textSecondary">#A1A1A1</color>
+
+
     <color name="instafirstclor">#3c43e5</color>
     <color name="instacenterclord">#d34267</color>
     <color name="instalastclor">#f6ac35</color>

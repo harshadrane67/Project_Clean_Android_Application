@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/drawable/ic_complete.xml" value="0.2175" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/drawable/ic_current.xml" value="0.2175" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/drawable/ic_fail.xml" value="0.2175" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/layout/activity_display_grievance.xml" value="0.19293478260869565" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/layout/activity_gri_detail.xml" value="0.2264151024877837" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/layout/activity_main.xml" value="0.19293478260869565" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/layout/activity_profile_setup.xml" value="0.2509057971014493" />
+        <entry key="..\:/Android Studio/Project_Clean_Android_Application/app/src/main/res/layout/single_grievance_item_view.xml" value="0.19293478260869565" />
         <entry key="..\:/CODING/Android Projects/Android_Course/ProjectClean/app/src/main/res/drawable/ic_add.xml" value="0.1515" />
         <entry key="..\:/CODING/Android Projects/Android_Course/ProjectClean/app/src/main/res/layout/activity_create_post.xml" value="0.22" />
         <entry key="..\:/CODING/Android Projects/Android_Course/ProjectClean/app/src/main/res/layout/activity_display_grievance.xml" value="0.33" />

@@ -9,7 +9,7 @@
     android:paddingBottom="10dp"
     android:layout_marginTop="20dp"
     android:orientation="vertical">
-
+<!--//username,time-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -51,22 +51,22 @@
                     android:orientation="horizontal">
 
 
-                    <ImageView
-                        android:id="@+id/iconHome"
-                        android:layout_width="18dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center_vertical"
-                        android:contentDescription="@string/icon"
-                        android:visibility="visible"
-                        app:srcCompat="@drawable/ic_location" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/iconHome"-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="24dp"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:contentDescription="@string/icon"-->
+<!--                        android:visibility="visible"-->
+<!--                        app:srcCompat="@drawable/ic_location" />-->
 
                     <TextView
-                        android:id="@+id/textVlocation"
+                        android:id="@+id/textVTimePosted"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:text="Location"
+                        android:text="2 days ago"
                         android:textColor="@android:color/secondary_text_light" />
 
                 </LinearLayout>
@@ -83,6 +83,8 @@
                 app:srcCompat="@drawable/ic_menu"
                 app:tint="@color/black" />
         </LinearLayout>
+<!--//username,time end-->
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -93,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
+<!--//imageview-->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -110,14 +112,14 @@
 
                     <TextView
                         android:id="@+id/textVCat"
+                        android:layout_margin="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
                         android:text="Category"
                         android:textColor="@color/purple_700"
                         android:textSize="24sp"
-                        app:layout_constraintStart_toStartOf="@id/post_image"
-                        app:layout_constraintTop_toTopOf="@id/post_image"/>
+                        app:layout_constraintStart_toStartOf="@+id/post_image"
+                        app:layout_constraintTop_toTopOf="@+id/post_image" />
 
                     <TextView
                         android:id="@+id/textVRank"
@@ -128,14 +130,39 @@
                         android:text="#2"
                         android:textSize="40sp"
                         app:layout_constraintBottom_toBottomOf="@id/post_image"
-                        app:layout_constraintEnd_toEndOf="@id/post_image"/>
+                        app:layout_constraintEnd_toEndOf="@id/post_image" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/post_image"
+                        android:orientation="horizontal">
+                        <ImageView
+                        android:id="@+id/iconHome"
+                        android:layout_width="18dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/icon"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_location" />
+                    <TextView
+                        android:id="@+id/textVlocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Somewhere"
+                        android:textColor="@android:color/secondary_text_light" />
+                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+<!--//title description-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="20dp"
+                    android:layout_marginVertical="10dp"
                     android:layout_marginStart="10dp"
                     android:baselineAligned="false"
                     android:orientation="vertical">
@@ -154,25 +181,7 @@
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/textVStatus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:text="In Progress"
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/textRead"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:text="Read More"
-                        android:textColor="@color/purple_700"
-                        android:textSize="14sp"/>
 
 
                     <TextView
@@ -186,80 +195,371 @@
                         android:textSize="14sp"
                         android:visibility="visible"/>
 
-                    <TextView
-                        android:id="@+id/textVTimePosted"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="0 days ago"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="5dp">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
 
-                            <ImageView
-                                android:id="@+id/icon_up"
-                                android:layout_width="30dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:contentDescription="@string/icon"
-                                android:src="@drawable/ic_thumb_up"
-                                android:visibility="visible" />
-
-                            <ImageView
-                                android:id="@+id/icon_upfill"
-                                android:layout_width="30dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:contentDescription="@string/icon"
-                                android:src="@drawable/ic_thumb_up_fill"
-                                android:visibility="invisible" />
-                        </RelativeLayout>
-
-                        <TextView
-                            android:id="@+id/textVUpvote"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:text="45"
-                            android:textSize="24sp">
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/guideline3">
 
-                        </TextView>
-                    </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/icon_up"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:contentDescription="@string/icon"
+                                    android:src="@drawable/ic_thumb_up"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/icon_upfill"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:contentDescription="@string/icon"
+                                    android:src="@drawable/ic_thumb_up_fill"
+                                    android:visibility="invisible" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/textVUpvote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:text="45"
+                                android:textAlignment="center"
+                                android:textSize="24sp">
+
+                            </TextView>
+                        </LinearLayout>
 
 
-                    <ImageView
-                        android:id="@+id/iconComments"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:contentDescription="@string/icon"
-                        android:src="@drawable/ic_comment" />
+                        <ImageView
+                            android:id="@+id/iconComments"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/icon"
+                            android:src="@drawable/ic_comment"
+                            app:layout_constraintStart_toStartOf="@id/guideline3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
 
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
+
+
+
+<!--                //status-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp">
+<!--//status Register(1st) start-->
+                        <View
+                            android:id="@+id/icRegister"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_complete"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/ivRegister"
+                            app:layout_constraintBottom_toBottomOf="@id/ivRegister"
+                            />
+                        <ImageView
+                            android:id="@+id/ivRegister"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="40dp"
+                            android:contentDescription="@string/icon"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+                        <View
+                            android:id="@+id/ViewSupport1"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            app:layout_constraintStart_toStartOf="@id/ivRegister"
+                            app:layout_constraintEnd_toEndOf="@id/ivRegister"
+                            app:layout_constraintTop_toTopOf="@id/ivRegister"
+                            app:layout_constraintBottom_toBottomOf="@id/ivRegister"/>
+
+                        <TextView
+                            android:id="@+id/textRegister"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/success"
+                            app:layout_constraintBottom_toBottomOf="@id/ViewSupport1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivRegister"/>
+
+                        <TextView
+                            android:id="@+id/textRegisterTag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Your Complain is registered."
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/textSecondary"
+                            app:layout_constraintTop_toBottomOf="@id/ViewSupport1"
+                            app:layout_constraintEnd_toEndOf="@id/textRegister"
+                            app:layout_constraintStart_toStartOf="@id/textRegister"/>
+
+<!--//status register end-->
+
+<!--//connection line 1-->
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/success"
+                            app:layout_constraintBottom_toTopOf="@id/icReview"
+                            app:layout_constraintTop_toBottomOf="@id/icRegister"
+                            app:layout_constraintStart_toStartOf="@id/icRegister"
+                            app:layout_constraintEnd_toEndOf="@id/icRegister"/>
+
+
+<!--//status review start-->
+                        <View
+                            android:id="@+id/icReview"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_complete"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/ivReview"
+                            app:layout_constraintBottom_toBottomOf="@id/ivReview"
+                            />
+
+                        <ImageView
+                            android:id="@+id/ivReview"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginStart="40dp"
+                            android:contentDescription="@string/icon"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintTop_toBottomOf="@id/ivRegister"
+                            app:layout_constraintStart_toStartOf="parent"/>
+                        <View
+                            android:id="@+id/ViewSupport2"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            app:layout_constraintStart_toStartOf="@id/ivReview"
+                            app:layout_constraintEnd_toEndOf="@id/ivReview"
+                            app:layout_constraintTop_toTopOf="@id/ivReview"
+                            app:layout_constraintBottom_toBottomOf="@id/ivReview"/>
+
+                        <TextView
+                            android:id="@+id/textReview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/success"
+                            app:layout_constraintBottom_toBottomOf="@id/ViewSupport2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivReview"/>
+
+                        <TextView
+                            android:id="@+id/textReviewTag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Your Complain is registered."
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/textSecondary"
+                            app:layout_constraintTop_toBottomOf="@id/ViewSupport2"
+                            app:layout_constraintEnd_toEndOf="@id/textReview"
+                            app:layout_constraintStart_toStartOf="@id/textReview"/>
+<!--//status review end-->
+
+<!--//connection line 2-->
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/success"
+                            app:layout_constraintBottom_toTopOf="@id/icProgress"
+                            app:layout_constraintTop_toBottomOf="@id/icReview"
+                            app:layout_constraintStart_toStartOf="@id/icReview"
+                            app:layout_constraintEnd_toEndOf="@id/icReview"/>
+
+
+<!--//status Progress start-->
+                    <View
+                        android:id="@+id/icProgress"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/ic_complete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivProgress"
+                        app:layout_constraintBottom_toBottomOf="@id/ivProgress"
+                        />
+                    <ImageView
+                        android:id="@+id/ivProgress"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="40dp"
+                        android:contentDescription="@string/icon"
+                        android:src="@drawable/ic_add"
+                        app:layout_constraintTop_toBottomOf="@id/ivReview"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <View
+                        android:id="@+id/ViewSupport3"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintStart_toStartOf="@id/ivProgress"
+                        app:layout_constraintEnd_toEndOf="@id/ivProgress"
+                        app:layout_constraintTop_toTopOf="@id/ivProgress"
+                        app:layout_constraintBottom_toBottomOf="@id/ivProgress"/>
+
+                    <TextView
+                        android:id="@+id/textProgress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/success"
+                        app:layout_constraintBottom_toBottomOf="@id/ViewSupport3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivProgress"/>
+
+                    <TextView
+                        android:id="@+id/textProgressTag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Your Complain is registered."
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/textSecondary"
+                        app:layout_constraintTop_toBottomOf="@id/ViewSupport3"
+                        app:layout_constraintEnd_toEndOf="@id/textProgress"
+                        app:layout_constraintStart_toStartOf="@id/textProgress"/>
+<!--//status progress end-->
+
+<!--//status complete start-->
+                        <View
+                            android:id="@+id/icComplete"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/ic_complete"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/ivComplete"
+                            app:layout_constraintBottom_toBottomOf="@id/ivComplete"
+                            />
+                        <ImageView
+                            android:id="@+id/ivComplete"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginStart="40dp"
+                            android:contentDescription="@string/icon"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintTop_toBottomOf="@id/ivProgress"
+                            app:layout_constraintStart_toStartOf="parent"/>
+                        <View
+                            android:id="@+id/ViewSupport4"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            app:layout_constraintStart_toStartOf="@id/ivComplete"
+                            app:layout_constraintEnd_toEndOf="@id/ivComplete"
+                            app:layout_constraintTop_toTopOf="@id/ivComplete"
+                            app:layout_constraintBottom_toBottomOf="@id/ivComplete"/>
+
+                        <TextView
+                            android:id="@+id/textComplete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/success"
+                            app:layout_constraintBottom_toBottomOf="@id/ViewSupport4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivComplete"/>
+
+                        <TextView
+                            android:id="@+id/textCompleteTag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Your Complain is registered."
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/textSecondary"
+                            app:layout_constraintTop_toBottomOf="@id/ViewSupport4"
+                            app:layout_constraintEnd_toEndOf="@id/textComplete"
+                            app:layout_constraintStart_toStartOf="@id/textComplete"/>
+
+
+<!--//connection line 3-->
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/success"
+                            app:layout_constraintBottom_toTopOf="@id/icComplete"
+                            app:layout_constraintTop_toBottomOf="@id/icProgress"
+                            app:layout_constraintStart_toStartOf="@id/icProgress"
+                            app:layout_constraintEnd_toEndOf="@id/icProgress"/>
+<!--//status Complete end-->
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <com.google.android.gms.maps.MapView
                     android:id="@+id/mapView"
                     android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
                     android:layout_height="240dp"
                     android:layout_weight="1" />
-            </LinearLayout>
+                </LinearLayout>
+
+
         </ScrollView>
     </LinearLayout>

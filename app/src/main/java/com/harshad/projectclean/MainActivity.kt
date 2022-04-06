@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Geocoder
-import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,9 +14,6 @@ import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
 import com.harshad.projectclean.databinding.ActivityMainBinding
 import java.lang.Exception
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
-import com.google.android.gms.tasks.CancellationToken
 
 //import okhttp3.MediaType.Companion.toMediaType
 //import okhttp3.MultipartBody
